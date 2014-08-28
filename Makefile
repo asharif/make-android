@@ -1,6 +1,10 @@
 # tested with android build tools 19
 default:
-	@echo "make-android - usage: make [r-support | r | classes | classes-debug | dx | apk | apk-debug | clean]"
+	@echo "make-android - usage: make [r-support | r | classes | classes-debug | dx | apk | apk-debug | all | all-debug | clean]"
+
+all: r-support r classes dx apk
+
+all-debug: r-support r classes-debug dx apk
 
 r-support:
 	@mkdir -p bin/generated/
